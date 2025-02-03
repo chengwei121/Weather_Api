@@ -11,7 +11,7 @@ A modern and responsive weather application that provides real-time weather info
 - Dynamic weather icons and backgrounds
 
 ## Screenshot
-![WeatherSense App Interface](./screenshot.png)
+![WeatherSense App Interface](./images/screenshot.png)
 
 Features shown in the interface:
 - Current temperature display (29°C)
