@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <div class="row g-0">
+            <!-- Left Panel -->
+            <div class="col-md-4 left-panel">
+                <div class="search-container">
+                    <h1 class="app-title">Weather<span>Sense</span></h1>
+                    <div class="search-box">
+                        <input type="text" id="city" class="search-input" placeholder="Search for a city...">
+                        <button id="search" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="current-weather">
+                    <div class="weather-icon-large">
+                        <img id="weather-icon" src="https://cdn.jim-nielsen.com/ios/512/weather-2019-02-07.png?rf=1024" alt="Weather Icon">
+                    </div>
+                    <div class="temperature-display">
+                        <span id="temp">--</span>
+                        <span class="degree">°C</span>
+                    </div>
+                    <h2 id="city-name" class="location">City Name</h2>
+                    <p id="condition" class="condition">Weather Condition</p>
+                    <p id="date" class="date"></p>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="col-md-8 right-panel">
+                <div class="weather-details-container">
+                    <div class="weather-stats">
+                        <div class="row g-4">
+                            <div class="col-6 col-md-3">
+                                <div class="weather-stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-wind"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <h3>Wind Speed</h3>
+                                        <p id="wind">-- km/h</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="weather-stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <h3>Humidity</h3>
+                                        <p id="humidity">--%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="weather-stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-cloud"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <h3>Cloud Cover</h3>
+                                        <p id="cloud">--%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="weather-stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="stat-details">
+                                        <h3>Visibility</h3>
+                                        <p id="visibility">-- km</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="forecast-container mt-4">
+                        <h2 class="section-title">Additional Information</h2>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-sun"></i>
+                                    </div>
+                                    <div class="info-details">
+                                        <h3>UV Index</h3>
+                                        <p id="uv">--</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-temperature-high"></i>
+                                    </div>
+                                    <div class="info-details">
+                                        <h3>Feels Like</h3>
+                                        <p id="feels-like">--°C</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-compass"></i>
+                                    </div>
+                                    <div class="info-details">
+                                        <h3>Wind Direction</h3>
+                                        <p id="wind-dir">--</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* Define color variables for consistent theming */
+:root {
+    --primary-color: #2b2d42;
+    --secondary-color: #8d99ae;
+    --accent-color: #ef233c;
+    --light-color: #edf2f4;
+    --dark-color: #1a1b26;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    min-height: 100vh;
+}
+
+/* Main container for the weather app */
+.weather-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(43, 45, 66, 0.95), rgba(26, 27, 38, 0.95));
+}
+
+/* Styles for the left panel */
+.left-panel {
+    background: linear-gradient(135deg, #2b2d42, #1a1b26);
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* App title styling with gradient text effect */
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #edf2f4, #8d99ae);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Accent color for part of the app title */
+.app-title span {
+    color: var(--accent-color);
+    -webkit-text-fill-color: var(--accent-color);
+}
+
+/* Search box container */
+.search-box {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Search input field styling */
+.search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background: rgba(237, 242, 244, 0.1);
+    color: var(--light-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Search input focus effect */
+.search-input:focus {
+    outline: none;
+    background: rgba(237, 242, 244, 0.15);
+    box-shadow: 0 0 15px rgba(239, 35, 60, 0.2);
+}
+
+/* Search button styling */
+.search-button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Search button hover effect */
+.search-button:hover {
+    color: var(--accent-color);
+}
+
+/* Current weather display */
+.current-weather {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Large weather icon container */
+.weather-icon-large {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Weather icon image */
+.weather-icon-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Temperature display */
+.temperature-display {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Degree symbol styling */
+.degree {
+    font-size: 2rem;
+    vertical-align: super;
+}
+
+/* Location name styling */
+.location {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Weather condition text */
+.condition {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Date display */
+.date {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Styles for the right panel */
+.right-panel {
+    padding: 2rem;
+}
+
+/* Container for weather details */
+.weather-details-container {
+    height: 100%;
+    padding: 2rem;
+    background: rgba(237, 242, 244, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Individual weather stat card */
+.weather-stat-card {
+    background: rgba(237, 242, 244, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for weather stat cards */
+.weather-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon for weather stats */
+.stat-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Heading for stat details */
+.stat-details h3 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraph for stat details */
+.stat-details p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-color);
+}
+
+/* Info card styling */
+.info-card {
+    background: rgba(237, 242, 244, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for info cards */
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon for info cards */
+.info-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Heading for info details */
+.info-details h3 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraph for info details */
+.info-details p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 27, 38, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+/* Loading spinner animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--secondary-color);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .left-panel {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+    .right-panel {
+        padding: 1.5rem;
+    }
+
+    .temperature-display {
+        font-size: 3rem;
+    }
+
+    .weather-icon-large {
+        width: 100px;
+        height: 100px;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
