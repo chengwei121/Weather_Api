@@ -2,8 +2,6 @@
 
 A modern and responsive weather application that provides real-time weather information using weather API integration.
 
-![Weather App Screenshot](./images/weather-app-screenshot.png)
-
 ## Features
 
 - Real-time weather data display
@@ -11,14 +9,22 @@ A modern and responsive weather application that provides real-time weather info
 - Responsive design for all devices
 - Beautiful UI with modern aesthetics
 - Dynamic weather icons and backgrounds
-- Detailed weather information including:
-  - Temperature and "Feels Like" temperature
-  - Wind speed and direction
-  - Humidity levels
-  - Cloud cover percentage
-  - UV Index
-  - Visibility
-  - Location-specific weather updates
+
+## Screenshot
+![WeatherSense App Interface](./screenshot.png)
+
+Features shown in the interface:
+- Current temperature display (29°C)
+- Location information (Penang, Malaysia)
+- Weather conditions (Partly cloudy)
+- Wind Speed (4.7 km/h)
+- Humidity (58%)
+- Cloud Cover (25%)
+- Visibility (8 km)
+- Additional information including:
+  - UV Index (12.1)
+  - Feels Like Temperature (32°C)
+  - Wind Direction (NNW)
 
 ## Technologies Used
 
@@ -38,17 +44,9 @@ git clone https://github.com/chengwei121/Weather_Api.git
 
 ## Usage
 
-1. Enter a city name in the search box (e.g., "Penang")
+1. Enter a city name in the search box
 2. Press enter or click the search button
-3. View detailed weather information including:
-   - Current temperature
-   - Weather condition
-   - Wind speed and direction
-   - Humidity
-   - Cloud cover
-   - UV Index
-   - Visibility
-   - "Feels like" temperature
+3. View detailed weather information for the selected location
 
 ## Contributing
 
